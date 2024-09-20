@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Reviews</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Reviews</h1>
+        <ul class="list-group">
+            {% for review in reviews %}
+            <li class="list-group-item">
+                <strong>{{ review.username }}:</strong> {{ review.text }} <br>
+                <small class="text-muted">{{ review.date }}</small>
+            </li>
+            {% empty %}
+            <li class="list-group-item">No reviews yet.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
